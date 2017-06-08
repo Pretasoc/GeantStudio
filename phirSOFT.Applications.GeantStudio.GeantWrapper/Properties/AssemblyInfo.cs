@@ -37,3 +37,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("0.1.0.0")]
 [assembly: NeutralResourcesLanguage("en")]
 
+[assembly: System.Windows.Markup.XmlnsDefinition("http://geant4.cern.ch/xaml","phirSOFT.Applications.GeantStudio.GeantWrapper")]
+
