@@ -11,23 +11,23 @@ namespace phirSOFT.Applications.GeantStudio.GeantWrapper
 {
     public abstract class SupportInitializeBase : ISupportInitialize, INotifyPropertyChanged
     {
-        private bool initializing;
+        private bool _initializing;
 
         protected SupportInitializeBase()
         {
-            initializing = false;
+            _initializing = false;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void BeginInit()
         {
-            initializing = true;
+            _initializing = true;
         }
 
         public void EndInit()
         {
-            initializing = false;
+            _initializing = false;
         }
 
         protected void Set<T>(ref T field, T value)
@@ -39,7 +39,7 @@ namespace phirSOFT.Applications.GeantStudio.GeantWrapper
         {
             if (field.Equals(value)) return;
 
-            if (!initializing)
+            if (!_initializing)
                 throw new InvalidOperationException("Tried to modify locked property after initialization ended.");
 
             if (!(validationCallback?.Invoke(value) ?? true)) return;
