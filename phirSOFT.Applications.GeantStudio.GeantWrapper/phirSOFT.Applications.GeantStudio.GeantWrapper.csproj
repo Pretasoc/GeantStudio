@@ -79,7 +79,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Isotope.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupportInitializeBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
