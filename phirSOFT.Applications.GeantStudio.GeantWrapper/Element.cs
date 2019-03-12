@@ -20,7 +20,7 @@ namespace phirSOFT.Applications.GeantStudio.GeantWrapper
 
         public Element()
         {
-            Isotopes = new Collection<Isotope>();
+        
         }
 
         public string Label { get; set; }
@@ -39,7 +39,7 @@ namespace phirSOFT.Applications.GeantStudio.GeantWrapper
             set => Set(ref _effectiveA, value);
         }
 
-        public ICollection<Isotope> Isotopes { get; }
+        public List<Isotope> Isotopes { get; } = new List<Isotope>();
 
 
         public static double GetRelativeAbundance(Isotope target)
